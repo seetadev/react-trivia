@@ -1,4 +1,5 @@
-var data = [
+export default {
+data : [
   {
     "category": "React 101",
     "questions": [
@@ -99,4 +100,5 @@ var data = [
       }
     ]
   }
-];
+]
+};

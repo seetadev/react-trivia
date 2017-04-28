@@ -43,14 +43,14 @@ class Card extends React.Component {
                 transform: 'translate3d(' + this.props.left + 'px,' + this.props.top + 'px,0)',
                 WebkitTransform: 'translate3d(' + this.props.left + 'px,' + this.props.top + 'px,0)'
             },
-            front = this.state.completed ? <img src='assets/img/react.svg'/> : <span className='points'>{this.props.question.points}</span>,
+            front = this.state.completed ? <img src='./assets/img/react.svg' alt='react'/> : <span className='points'>{this.props.question.points}</span>,
             className = 'flipper';
 
         if (this.state.view !== 'points') {
-            className = className + ' flipped';
+            className += ' flipped';
         }
         if (this.state.flipping) {
-            className = className + ' flipping';
+            className += ' flipping';
         }
         return (
             <div style={style} className={className} onClick={this.clickHandler.bind(this)} onTransitionEnd={this.transitionEndHandler.bind(this)}>
@@ -60,7 +60,7 @@ class Card extends React.Component {
                     </div>
                     <div className='back'>
                         <span dangerouslySetInnerHTML={this.getLabelBack()}/>
-                        <img src='assets/img/react.svg'/>
+                        <img src='./assets/img/react.svg' alt="card"/>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Card from './Card';
 import Headers from './Headers';
-import request from './request';
+import data from './data.js';
+import './index.css';
 
 class App extends React.Component {
 
@@ -26,12 +27,22 @@ class App extends React.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize.bind(this));
         let rows = 0;
-        data.forEach(category => {
-            if (category.questions.length > rows) {
-                rows = category.questions.length;
-            }
+        // console.log(JSON.stringify(data));
+        let cols = 0;
+        let datum = '';
+        Object.keys(data).forEach(key => {
+            cols = data[key].length;
+            datum = data[key];
+            data[key].forEach(category =>{
+                // console.log(data[key].length);
+
+                // console.log(JSON.stringify(data[key]));
+                if (category.questions.length > rows) {
+                    rows = category.questions.length;
+                }
+            })
         });
-        this.setState({data: data, rows: rows, cols: data.length});
+        this.setState({data: datum, rows: rows, cols: cols });
     }
 
     /*
