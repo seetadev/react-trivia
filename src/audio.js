@@ -1,7 +1,11 @@
+import flip from './audio/card-flip.mp3';
+import flipBack from './audio/card-flip-back.mp3';
+import countdown from './audio/countdown.wav';
+
 let sounds = {};
-sounds.flip = new Audio("./assets/audio/card-flip.mp3");
-sounds.flipBack = new Audio("./assets/audio/card-flip-back.mp3");
-sounds.countdown = new Audio("./assets/audio/countdown.wav");
+sounds.flip = new Audio(flip);
+sounds.flipBack = new Audio(flipBack);
+sounds.countdown = new Audio(countdown);
 
 export let play = sound => {
     if (sounds[sound]) {

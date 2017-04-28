@@ -1,5 +1,6 @@
 import React from 'react';
 import * as audio from './audio';
+import logo from './react.svg';
 
 class Card extends React.Component {
 
@@ -43,7 +44,7 @@ class Card extends React.Component {
                 transform: 'translate3d(' + this.props.left + 'px,' + this.props.top + 'px,0)',
                 WebkitTransform: 'translate3d(' + this.props.left + 'px,' + this.props.top + 'px,0)'
             },
-            front = this.state.completed ? <img src='./assets/img/react.svg' alt='react'/> : <span className='points'>{this.props.question.points}</span>,
+            front = this.state.completed ? <img src={logo} alt='react'/> : <span className='points'>{this.props.question.points}</span>,
             className = 'flipper';
 
         if (this.state.view !== 'points') {
@@ -60,7 +61,7 @@ class Card extends React.Component {
                     </div>
                     <div className='back'>
                         <span dangerouslySetInnerHTML={this.getLabelBack()}/>
-                        <img src='./assets/img/react.svg' alt="card"/>
+                        <img src={logo} alt="card"/>
                     </div>
                 </div>
             </div>

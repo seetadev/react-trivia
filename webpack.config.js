@@ -26,6 +26,19 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader:'style!css!'
+            },
+            {
+                test: /\.svg$/, loader:'ignore-loader'
+            },
+            {
+                test: /\.mp3$/, loader:'ignore-loader'
+            },
+            {
+                test: /\.wav$/, loader:'ignore-loader'
+            }
+            ,
+            {
+                test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'
             }
         ]
     },
