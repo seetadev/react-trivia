@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack"
+    "webpack": "webpack",
+    "start": "react-scripts start"
   },
   "author": "Christophe Coenraets <ccoenraets@gmail.com> (http://coenraets.org/)",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "babel-preset-react": "^6.11.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
+    "react-scripts": "^0.9.5",
     "webpack": "^1.13.1"
   }
 }
